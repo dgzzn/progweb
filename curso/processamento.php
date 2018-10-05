@@ -2,9 +2,13 @@
 include_once 'Curso.php';
 
 $curso = new Curso();
-$curso->inserir($_POST);
+$resultado = $curso->inserir($_POST);
 
-header('location: formulario.php');
 
 
 ?>
+<script>
+    var mensagem = '<?php echo $resultado ? 'Sucesso' : 'Ocorreu um erro' ?>';
+    alert(mensagem);
+    window.location.href = 'formulario.php';
+</script>
