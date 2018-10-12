@@ -29,6 +29,11 @@ class Curso{
         $sql = "insert into curso (nome) values ('$nome')";
         return (new Conexao())->executar($sql);
     }
+    public function selectDados()
+    {
+        $sql = "select * from curso order by nome";
+        return (new Conexao())->recuperarDados($sql);
+    }
 }
 
 ?>

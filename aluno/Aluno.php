@@ -2,7 +2,7 @@
 
 include_once '../Conexao.php';
 
-class Responsavel{
+class Aluno{
     protected $id_aluno;
     protected $matricula;
     protected $nome;
@@ -64,10 +64,16 @@ class Responsavel{
         $endereco = $dados['endereco'];
         $data_nascimento = $dados['data_nascimento'];
         $sexo = $dados['sexo'];
-        $sql = "insert into aluno(nome, telefone, endereco, data_nascimento, sexo)
-        values ('$nome', '$telefone', '$endereco', '$data_nascimento', '$sexo')";
+        $sql = "insert into aluno(nome, telefone, endereco, data_nascimento, sexo, id_curso)
+        values ('$nome', '$telefone', '$endereco', '$data_nascimento', '$sexo', 3)";
         
         return (new Conexao())->executar($sql);
+    }
+
+    public function selectDados()
+    {
+        $sql = "select * from aluno order by nome";
+        return (new Conexao())->recuperarDados($sql);
     }
 }
 

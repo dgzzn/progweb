@@ -10,9 +10,10 @@ include_once '../mysql.php' ?>
         <div class="form-group">
             <label for="nome">Curso</label>
             <input type="text" id="nome" name="nome"/> <br/><br/>
-            <input class="btn btn-default" type="submit" value="Enviar"/>
+            <input class="btn btn-primary" type="submit" value="Enviar"/><a name="" id="" class="btn btn-success" href="index.php" role="button">Voltar</a>
         </div>
     </form>
 </div>
 
 
+<?php include_once '../rodape.php';?>

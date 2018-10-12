@@ -68,6 +68,11 @@ class Responsavel{
         
         return (new Conexao())->executar($sql);
     }
+
+    public function selectDados(){
+        $sql = "select * from responsavel order by nome";
+        return (new Conexao())->recuperarDados($sql);
+    }
 }
 
 

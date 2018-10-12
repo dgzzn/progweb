@@ -1,4 +1,5 @@
-<?php include_once '../cabecalho.php' ?>
+<?php include_once '../cabecalho.php' ;
+?>
 
 <h1>Responsável</h1>
 
