@@ -2,9 +2,16 @@
 include_once 'Curso.php';
 
 $curso = new Curso();
-$resultado = $curso->inserir($_POST);
 
+switch($_GET['acao']){
+    case "excluir":
+        $resultado = $curso->excluir($_GET['id_curso']);
+        break;
 
+    case "salvar":
+        $resultado = $curso->inserir($_POST);
+        break;
+}
 
 ?>
 <script>

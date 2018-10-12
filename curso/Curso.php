@@ -34,6 +34,12 @@ class Curso{
         $sql = "select * from curso order by nome";
         return (new Conexao())->recuperarDados($sql);
     }
+
+    public function excluir($id)
+    {
+        $sql = "delete from curso where id_curso=$id";
+        return (new Conexao())->executar($sql);
+    }
 }
 
 ?>

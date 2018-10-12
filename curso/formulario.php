@@ -1,5 +1,5 @@
 <?php include_once '../cabecalho.php';
-include_once '../mysql.php' ?>
+include_once 'Curso.php' ?>
 
 <h1>Curso</h1>
 
