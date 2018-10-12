@@ -6,7 +6,7 @@ include_once 'Curso.php' ?>
 <br/>
 
 <div class="jumbotron">
-    <form action="processamento.php" method="post">
+    <form action="processamento.php?acao=salvar" method="post">
         <div class="form-group">
             <label for="nome">Curso</label>
             <input type="text" id="nome" name="nome"/> <br/><br/>
