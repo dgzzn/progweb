@@ -8,7 +8,7 @@ class Curso{
     protected $nome;
 
     public function getIdCurso(){
-        return $this->$id_curso;
+        return $this->id_curso;
     }
 
     public function setIdCurso($id_curso){
@@ -16,7 +16,7 @@ class Curso{
     }
 
     public function getNome(){
-        return $this->$nome;
+        return $this->nome;
     }
 
     public function setNome($nome){
@@ -38,6 +38,22 @@ class Curso{
     public function excluir($id)
     {
         $sql = "delete from curso where id_curso=$id";
+        return (new Conexao())->executar($sql);
+    }
+
+    public function selecionarId($id_curso)
+    {
+        $sql = "select * from curso where id_curso=$id_curso";
+        $curso = (new Conexao())->recuperarDados($sql);
+
+        $this->id_curso = $curso[0]['id_curso'];
+        $this->nome = $curso[0]['nome'];
+    }
+    public function alterar($dados)
+    {          
+        $nome = $dados['nome'];
+        $id_curso = $dados['id_curso'];
+        $sql = "update curso set nome='$nome' where id_curso=$id_curso";
         return (new Conexao())->executar($sql);
     }
 }

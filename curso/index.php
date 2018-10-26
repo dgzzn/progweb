@@ -20,7 +20,7 @@ $cursos = (new Curso())->selectDados();
         echo "
         <tr>
             <td scope='row'>{$curso['nome']}</td>
-            <td><a class='btn btn-primary' href='#' role='button'>Alterar</a>
+            <td><a class='btn btn-primary' href='formulario.php?id_curso={$curso['id_curso']}' role='button'>Alterar</a>
             <a class='btn btn-danger' href='processamento.php?id_curso={$curso['id_curso']}&acao=excluir' role='button'>Excluir</a></td>
         </tr>
         ";
