@@ -10,7 +10,8 @@ $alunos = (new aluno())->selectDados();
 <a name="" id="" class="btn btn-success" href="formulario.php" role="button">Inserir</a><br><br>
 <table class="table table-bordered table-hover">
     <thead class="thead-dark">
-        <tr>
+        <tr> 
+            <th>Matrícula</th>   
             <th>Aluno</th>
             <th>Telefone</th>
             <th>Endereço</th>
@@ -22,12 +23,13 @@ $alunos = (new aluno())->selectDados();
     <?php foreach($alunos as $aluno){
         echo "
         <tr>
+            <td scope='row'>{$aluno['matricula']}</td>
             <td scope='row'>{$aluno['nome']}</td>
             <td scope='row'>{$aluno['telefone']}</td>
             <td scope='row'>{$aluno['endereco']}</td>
             <td scope='row'>{$aluno['data_nascimento']}</td>
-            <td><a class='btn btn-primary' href='#' role='button'>Alterar</a>
-            <a class='btn btn-danger' href='#' role='button'>Excluir</a></td>
+            <td><a class='btn btn-primary' href='formulario.php?id_aluno={$aluno['id_aluno']}' role='button'>Alterar</a>
+            <a class='btn btn-danger' href='processamento.php?id_aluno={$aluno['id_aluno']}&acao=excluir' role='button'>Excluir</a></td>
         </tr>
         ";
     }

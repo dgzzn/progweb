@@ -22,13 +22,13 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="../aluno/formulario.php">Aluno</a>
+                <a class="nav-link" href="../aluno/index.php">Aluno</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../responsavel/formulario.php">Responsável</a>
+                <a class="nav-link" href="../responsavel/index.php">Responsável</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../curso/formulario.php">Cursos</a>
+                <a class="nav-link" href="../curso/index.php">Cursos</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

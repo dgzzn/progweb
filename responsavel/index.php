@@ -26,8 +26,8 @@ $responsaveis = (new Responsavel())->selectDados();
             <td scope='row'>{$responsavel['telefone']}</td>
             <td scope='row'>{$responsavel['endereco']}</td>
             <td scope='row'>{$responsavel['data_nascimento']}</td>
-            <td><a class='btn btn-primary' href='#' role='button'>Alterar</a>
-            <a class='btn btn-danger' href='#' role='button'>Excluir</a></td>
+            <td><a class='btn btn-primary' href='formulario.php?id_responsavel={$responsavel['id_responsavel']}' role='button'>Alterar</a>
+            <a class='btn btn-danger' href='processamento.php?id_responsavel={$responsavel['id_responsavel']}&acao=excluir' role='button'>Excluir</a></td>
         </tr>
         ";
     }
